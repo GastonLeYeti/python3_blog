@@ -20,9 +20,7 @@ from blog import views
 urlpatterns = patterns('blog.views',
     url(r'^$', 'home'),
     url(r'^article/(\d+)$', 'view_article'),  # Vue d'un article
-    url(r'^articles/(?P<year>\d{4})/(?P<month>\d{2})$', 'list_articles'),  # Vue des articles d'un mois précis
-    url(r'^date$', 'date_actuelle'), # affiche la date ... normalement
-    url(r'^addition/(?P<nombre1>\d+)/(?P<nombre2>\d+)/$', 'addition') #une calculette ...
+    url(r'^articles/$', 'list_articles'),  # Vue des articles
 )
 
     
