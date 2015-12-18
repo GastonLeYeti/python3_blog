@@ -7,13 +7,10 @@ def home(request):
   
   
 def view_article(request, id):
-    
-  
     try:
         article = Article.objects.get(id=id)
     except Article.DoesNotExist:
         raise Http404
-
     return render(request, 'blog/article.html', {'article': article})
   
   

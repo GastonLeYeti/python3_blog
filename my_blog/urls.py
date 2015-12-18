@@ -15,12 +15,17 @@
 #    3. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 #"""
 from django.conf.urls import patterns, url
+from django.conf.urls import include, url
 from blog import views
+from django.contrib import admin
+
 
 urlpatterns = patterns('blog.views',
     url(r'^$', 'home'),
-    url(r'^article/(\d+)$', 'view_article'),  # Vue d'un article
+    url(r'^article/(?P<id>\d+)$', 'view_article'),  # Vue d'un article
     url(r'^articles/$', 'list_articles'),  # Vue des articles
+    url(r'^licornes/', include(admin.site.urls)),
+
 )
 
     

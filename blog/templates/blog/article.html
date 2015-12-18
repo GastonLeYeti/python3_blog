@@ -2,8 +2,10 @@
 {% block title %}Mon article{% endblock %}
 {% block content %}
     <h2>voilà un article</h2>
-<h1>{{ article.titre }} <span class="small">dans {{ article.categorie.nom }}</span></h1>
-<p class="infos">Rédigé par {{ article.auteur }}, le {{ article.date|date:"DATE_FORMAT" }}</p>
-<div class="contenu">{{ article.contenu|linebreaks }}</div>
+<div class="article">
+  <h1>{{ article.titre }} <span class="small">dans {{ article.categorie.nom }}</span></h1>
+  <p class="infos">Rédigé par {{ article.auteur }}, le {{ article.date|date:"DATE_FORMAT" }}</p>
+  <div class="contenu">{{ article.contenu|linebreaks }}</div>
+</div>
 
 {% endblock %}
