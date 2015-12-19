@@ -2,16 +2,16 @@ Créer un superuser avec la cmd
 =======
 
 ````
-$ django-admin createsuperuser
+$python3 django-admin createsuperuser
 ````
 
 Créer un article via le panel adm
 =======
 
-Rendez-vous dans l'admin du blog pour créer un aricle via /licornes.
+Rendez-vous dans l'admin du blog pour créer un article via /licornes.
 
 
 Consulter le blog
 =======
 
-soit avec un simple clic depuis l'accueil sur blog, soit par /articles
+soit avec un simple clic depuis l'accueil sur blog, soit par /articles.
