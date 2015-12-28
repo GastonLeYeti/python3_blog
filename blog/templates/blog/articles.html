@@ -14,17 +14,17 @@
 
     <section class="bg-dark">
         <div class="container text-center">
-            <div class="call-to-action">
+            <div class="call-to-action row">
               
           {% for article in derniers_articles %}
-    <div class="article">
-    	<h3>{{ article.titre }}</h3>
-    	<p>{{ article.contenu|truncatewords_html:80 }}</p>
-        <p><a href="{% url "blog.views.view_article" article.id %}">Lire la suite</a>
-    </div>
-{% empty %}
-    <p>Aucun article.</p>
-{% endfor %}
+              <div class="article col-sm-6 col-sm-offset-3">
+                <h3><a href="{% url "blog.views.view_article" article.id %}">{{ article.titre }}</a></h3>
+                  <p>{{ article.contenu|truncatewords_html:80 }}</p>
+
+              </div>
+          {% empty %}
+              <p>Aucun article.</p>
+          {% endfor %}
               
               
           </div>

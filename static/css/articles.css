@@ -32,3 +32,10 @@ nav,
 .affix-top{
   border: none;
 }
+
+.article{
+  position: relative;
+border: solid 1px #aaa;
+  min-height: 360px;
+  margin-bottom: 20px;
+}
