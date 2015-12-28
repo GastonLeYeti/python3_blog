@@ -1,0 +1,8 @@
+body{
+  background-image: url(../img/header_article.jpg);
+    background-position: 0px -260px;
+}
+
+section{
+  min-height: 60vh;
+}

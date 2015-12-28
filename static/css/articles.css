@@ -1,0 +1,34 @@
+body{
+  background-image: url(../img/header_articles.jpg);
+    background-position: 0px -170px;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: none;
+    
+}
+
+@media(min-width:768px) {
+    header {
+        min-height: 40%;
+    }
+}
+
+nav,
+.navbar,
+.navbar-default,
+.navbar-fixed-top,
+.affix-top{
+  border: none;
+}

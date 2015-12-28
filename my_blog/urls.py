@@ -25,7 +25,6 @@ urlpatterns = patterns('blog.views',
     url(r'^article/(?P<id>\d+)$', 'view_article'),  # Vue d'un article
     url(r'^articles/$', 'list_articles'),  # Vue des articles
     url(r'^licornes/', include(admin.site.urls)),
-
 )
 
     

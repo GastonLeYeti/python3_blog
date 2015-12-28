@@ -18,4 +18,3 @@ def view_article(request, id):
 def list_articles(request):
     articles = Article.objects.all() # Nous sélectionnons tous nos articles
     return render(request, 'blog/articles.html', {'derniers_articles': articles})
-  

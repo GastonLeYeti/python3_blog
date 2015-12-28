@@ -1,9 +1,22 @@
 {% extends "./base.html" %}
 {% block title %}Mes articles{% endblock %}
+{% block addCss %}<link rel="stylesheet" href="/static/css/articles.css" type="text/css">{% endblock %}
 {% block content %}
-    <h2>voilà la liste des articles</h2>
 
-{% for article in derniers_articles %}
+<header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>Liste des articles</h1>
+                <hr>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+              
+          {% for article in derniers_articles %}
     <div class="article">
     	<h3>{{ article.titre }}</h3>
     	<p>{{ article.contenu|truncatewords_html:80 }}</p>
@@ -12,5 +25,10 @@
 {% empty %}
     <p>Aucun article.</p>
 {% endfor %}
+              
+              
+          </div>
+        </div>
+    </section>
 
 {% endblock %}

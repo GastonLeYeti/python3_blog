@@ -1,11 +1,32 @@
 {% extends "./base.html" %}
-{% block title %}Mon article{% endblock %}
+{% block title %}Mon article - {{ article.titre }}{% endblock %}
+{% block addCss %}
+  <link rel="stylesheet" href="/static/css/articles.css" type="text/css">
+  <link rel="stylesheet" href="/static/css/article.css" type="text/css">
+{% endblock %}
 {% block content %}
-    <h2>voilà un article</h2>
-<div class="article">
-  <h1>{{ article.titre }} <span class="small">dans {{ article.categorie.nom }}</span></h1>
-  <p class="infos">Rédigé par {{ article.auteur }}, le {{ article.date|date:"DATE_FORMAT" }}</p>
-  <div class="contenu">{{ article.contenu|linebreaks }}</div>
-</div>
+
+<header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>{{ article.titre }}</h1>
+                <hr>
+                <h4>dans {{ article.categorie.nom }}</h4>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+
+
+  
+              <div class="contenu">{{ article.contenu|linebreaks }}</div>
+              
+              <p class="infos">Rédigé par {{ article.auteur }}, le {{ article.date|date:"DATE_FORMAT" }}</p>
+              </div>
+        </div>
+    </section>
 
 {% endblock %}
